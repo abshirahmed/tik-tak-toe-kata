@@ -1,5 +1,5 @@
 {
-  "name": "typescript-base",
+  "name": "tik-tak-toe-kata",
   "version": "1.0.0",
   "description": "TypeScript base example project",
   "main": "./build/index.js",
