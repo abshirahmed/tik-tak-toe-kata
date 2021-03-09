@@ -14,4 +14,8 @@ export default class TicTacToe {
         ]
         return new Grid(defaultGrid)
     }
+
+    play(playerSymbol: string, coordinates: object) {
+        if (playerSymbol !== 'X') throw new Error();
+    }
 }

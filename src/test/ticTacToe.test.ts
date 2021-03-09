@@ -9,11 +9,18 @@ describe('Tic Tac Toe Calisthenics', () => {
         expect(grid).toBeInstanceOf(Grid);
     })
 
-    it("should throw an error when no arguments are passed to the play method", () => {
+    it("should throw an error when player 1 is not 'X'", () => {
         const ticTacToe = new TicTacToe();
 
-        const grid = ticTacToe.start();
+        ticTacToe.start();
 
-        expect(()=> ticTacToe.play()).toThrowError()
+        expect(() => ticTacToe.play('O', {x: 1, y: 2})).toThrowError()
+    })
+    it("should throw an error when player 2 is not 'O'", () => {
+        const ticTacToe = new TicTacToe();
+
+        ticTacToe.start();
+        ticTacToe.play('X', {x: 1, y: 2})
+        expect(() => ticTacToe.play('X', {x: 1, y: 3})).toThrowError()
     })
 })
