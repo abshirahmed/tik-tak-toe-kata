@@ -29,7 +29,7 @@ describe('Tic Tac Toe Calisthenics', () => {
         const ticTacToe = new TicTacToe();
 
         ticTacToe.start();
-        expect(ticTacToe.play('X', {x: 1, y: 2})).toBe([
+        expect(ticTacToe.play('X', {x: 1, y: 2})).toMatchObject([
             ['', 'X', ''],
             ['', '', ''],
             ['', '', '']
