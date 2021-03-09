@@ -6,6 +6,7 @@ export class Grid {
 }
 
 export default class TicTacToe {
+    private nextPlayer="X"
     start():Grid{
         const defaultGrid = [
             ['', '', ''],
@@ -16,6 +17,7 @@ export default class TicTacToe {
     }
 
     play(playerSymbol: string, coordinates: object) {
-        if (playerSymbol !== 'X') throw new Error();
+        if (this.nextPlayer !== playerSymbol) throw new Error();
+        this.nextPlayer="O";
     }
 }

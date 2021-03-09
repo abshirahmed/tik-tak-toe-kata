@@ -16,11 +16,24 @@ describe('Tic Tac Toe Calisthenics', () => {
 
         expect(() => ticTacToe.play('O', {x: 1, y: 2})).toThrowError()
     })
+
     it("should throw an error when player 2 is not 'O'", () => {
         const ticTacToe = new TicTacToe();
 
         ticTacToe.start();
         ticTacToe.play('X', {x: 1, y: 2})
         expect(() => ticTacToe.play('X', {x: 1, y: 3})).toThrowError()
+    })
+
+    it("should print the grid after each time", () => {
+        const ticTacToe = new TicTacToe();
+
+        ticTacToe.start();
+        expect(ticTacToe.play('X', {x: 1, y: 2})).toBe([
+            ['', 'X', ''],
+            ['', '', ''],
+            ['', '', '']
+        ]);
+
     })
 })
